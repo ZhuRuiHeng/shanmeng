@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/pkg/list",
+    "pages/detail/index",
+    "pages/search/index",
+    "pages/more/more",
+    "pages/star/star"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "闪萌",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#ff5656",
+    "backgroundColor": "#fff",
+    "borderStyle": "transparent",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/pages/img/home-icon.png",
+        "selectedIconPath": "/pages/img/home-icon-active.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多好玩",
+        "iconPath": "/pages/img/more.png",
+        "selectedIconPath": "/pages/img/more_hover.png"
+      }
+    ]
+  }
+}

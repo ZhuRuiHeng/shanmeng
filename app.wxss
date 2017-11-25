@@ -1,0 +1,147 @@
+/**app.wxss**/
+page {
+  font-family: -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+  background-color: #f4f4f4;
+  height: 100%;
+}
+.one-px:before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #eee;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  padding: 1px;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.one-px-t:before {
+  content: "";
+  height: 1px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-transform: scaleY(0.4);
+  transform: scaleY(0.4);
+  box-sizing: border-box;
+  pointer-events: none;
+  background: #eee;
+  position: absolute;
+  z-index: 1;
+}
+
+.one-px-b:after {
+  content: "";
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: scaleY(0.4);
+  transform: scaleY(0.4);
+  box-sizing: border-box;
+  pointer-events: none;
+  background: #eee;
+  position: absolute;
+  z-index: 1;
+}
+
+.one-px-r:after {
+  content: "";
+  width: 1px;
+  right: 0;
+  height: 100%;
+  -webkit-transform: scaleX(0.4);
+  transform: scaleX(0.4);
+  box-sizing: border-box;
+  pointer-events: none;
+  background: #eee;
+  position: absolute;
+  z-index: 1;
+}
+
+body {
+  font-family: -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+  background-color: #f4f4f4;
+  height: 100%;
+}
+
+wx-view {
+  background-color: #fff;
+}
+
+.section {
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.no-gap {
+  border: none;
+  margin-bottom: 0;
+}
+
+.giflist {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 9px 9px 0;
+}
+
+.pic {
+  width: 107px;
+  height: 107px;
+  margin: 0 0 9px 0;
+  overflow: hidden;
+}
+
+.gif-list-scroll {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.gif-list-scroll.no-scroll {
+  height: auto;
+}
+
+.placeholder {
+  height: 0;
+  visibility: hidden;
+}
+
+.lazyload:nth-child(6n+1) wx-image {
+  background-color: #FFB8AE;
+}
+
+.lazyload:nth-child(6n+2) wx-image {
+  background-color: #B6EFFF;
+}
+
+.lazyload:nth-child(6n+3) wx-image {
+  background-color: #FFD8A2;
+}
+
+.lazyload:nth-child(6n+4) wx-image {
+  background-color: #EACCFF;
+}
+
+.lazyload:nth-child(6n+5) wx-image {
+  background-color: #CCD4FF;
+}
+
+.lazyload:nth-child(6n+6) wx-image {
+  background-color: #BCFFDA;
+}

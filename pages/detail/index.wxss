@@ -1,0 +1,192 @@
+
+.taglist {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-top: 10px;
+    -webkit-flex-flow: wrap;
+    flex-flow: wrap
+}
+
+.tag {
+    background: #ffda44;
+    font-size: 13px;
+    padding: 0 20px;
+    margin: 5px;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.container {
+    height: 100%;
+}
+
+.tip {
+    height: 42px;
+    line-height: 42px;
+    padding: 0 9px;
+    font-size: 13px;
+    position: relative;
+}
+
+.tip .bold {
+    font-weight: bold;
+    display: inline;
+}
+
+.tip .close {
+    height: 100%;
+    width: 42px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnZJREFUWAm1mL1qWzEUx607JHjxC5R2MwS82WtouWTKFPICSSDkBZqlHUI7FbwUQ17AeDfNEjKVDln9MRhPntOpi40Xd/DN/3/xMbLsmyvpygKhI+nonB9XRx9XajweHywWi+/L5fKqVCop5Ha5XP5Wq9X+Q95bGo1G7+H3Hg5ipdQL8l29Xu+qwWDwAzBfdc/ofKpUKufVanWht4eSh8NhFT7/JEnyTmzCJ6rJx2j1ZaQ9LdFxOpvNfk0mk8ONjgCVXTA0C59gUhcRZE7TVtoHVBaMOCcUgdrSYJYhofJgOGXInYgBDOHJhJF6CKg8mJWv20aj8ZxOF2OFMUPnAmKWhPYJdBuYKIpuscJ+0uc6fvYB5QqzAcRKSCgfmC2gUFC+MDuBikIVgckE8oUqCvMmkCvUfD7/YB4HtKEnfTXp7bq8XmV6oy5bBvpvjDnCtrE+m3QblG1gqJcLRCUbKOplJVsYjrcCoqIvlAuME5APlCuMM5AG9Yh4OWE9KwHmC46DZlZ/VjtPe6fE1YQBR3mDAPyJ05ynZ/ZbxxAH2uwzugOfA9kayBVGwFyhrIB8YXygcmPIBoYBHOqS9yaQJQwvV01e3kJAZU6ZA0x60+P02GyeeTG1E8gHRuKlKNQWUBGYEFAbQCFgikKtgULCFIFKgfYB4wsV8RUixE1PAMySDxY2W8J0Ou3i/FOq1+s9wMiZaUjqPlcIGauXNqsP+jfcGGN9oC6HgqFNmy8FtTjCRvWiQ4gcEkZs5kGRhUB3yIkMooz8Wf61pT1UKVCw92jY/Ae/rXSVIY6O0XlJBTR2+AphKAevMoD7/f41DMfwySe9Fj7C31d5WYjWryPoCQAAAABJRU5ErkJggg==);
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.preview {
+    width: 100%;
+    height: 192px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.preview-status {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    color: #FFDA44;
+    font-size: 18px;
+    line-height: 192px;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.loading .preview-status {
+    display: block;
+}
+
+.preview-des {
+    position: relative;
+    height: 100%;
+    display: block;
+}
+
+.preview wx-image {
+    max-height: 172px;
+    opacity: 1;
+    display: inline-block;
+    visibility: visible;
+}
+
+.loading .preview wx-image {
+    opacity: 0;
+}
+
+wx-progress {
+    position: absolute;
+    top: 188px;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+}
+
+.loading wx-progress {
+    opacity: 1;
+}
+
+.section {
+    margin-top: 14px;
+}
+
+.titlebar {
+    display: -webkit-flex;
+    display: flex;
+    border: none;
+    color: #222;
+    font-size: 13px;
+    text-indent: 0;
+    padding: 9px 0;
+    margin: 0 9px;
+    position: relative;
+}
+
+.titlebar .title {
+    -webkit-flex: 1;
+    flex: 1;
+    padding-left: 22px;
+}
+
+.section-related .title {
+    background: url('https://192.168.100.101/shanmeng/images/detail/titlebar_related_3x.png') no-repeat 0 50% / 17px;
+    background-size: 15px 15px;
+}
+
+.ops {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.ops-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 9px auto;
+}
+
+.ops-item {
+    width: 44%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+    color: #222;
+    background-color: #FFDA44;
+    display: block;
+}
+
+.ops-item:first-child {
+    margin-right: 2%;
+}
+
+.ops-item:last-child {
+    margin-left: 2%;
+}
+
+.loading .ops-item {
+    color: #9b9b9b;
+    background-color: #eee;
+}
+
+.giflist {
+}
+
+.space {
+    height: 73px;
+    display: block;
+    background: #f4f4f4;
+}
+
+.pic wx-image {
+    width: 107px;
+    height: 107px;
+}

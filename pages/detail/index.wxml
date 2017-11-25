@@ -1,0 +1,40 @@
+<scroll-view class="container" enable-back-to-top="" scroll-y="true" lower-threshold="100" scroll-top="0"
+                scroll-left="0">
+    <div class="scroll-view">
+        <div style="overflow-x: hidden; overflow-y: auto;" class="scroll-view">
+            <div style="height: 100%;">
+                <view class="preview">
+                    <view class="preview-status">
+                        <div class="preview-des">小闪正在努力加载中...</div>
+                    </view>
+                    <image src="{{detail.origin_gif}}" style="width: 192px">
+                    </image>
+                    <progress active="" percent="100" stroke-width="4">
+                    </progress>
+                </view>
+                <view class="section section-related">
+                    <view class="titlebar one-px-b">
+                        <view class="title">相关表情</view>
+                    </view>
+                    <view class="giflist">
+                        <view wx:for="{{related}}" class="pic lazyload">
+                            <navigator url="../detail/index?id={{item.origin_id}}">
+                                <image id="{{item.origin_id}}" mode="aspectFill"
+                                          src="{{item.thumb_gif}}">
+                                </image>
+                            </navigator>
+                        </view>
+                        <view class="pic placeholder"></view>
+                    </view>
+                    <view class="space"></view>
+                </view>
+                <view class="ops">
+                    <view class="ops-list">
+                        <view bindtap="saveImage" data-src="{{detail.origin_gif}}" class="ops-item save">保存</view>
+                        <view bindtap="share" class="ops-item send" data-src="{{detail.origin_gif}}">分享</view>
+                    </view>
+                </view>
+            </div>
+        </div>
+    </div>
+</scroll-view>

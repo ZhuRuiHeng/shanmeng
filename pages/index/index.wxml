@@ -1,0 +1,67 @@
+<view class="section no-gap section-searchBar">
+    <!--滚动文字  -->
+    <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}px;">
+        <text>{{broadcasting}}</text>
+        <text wx:if="{{marquee2copy_status}}" style="margin-left:{{marquee2_margin}}px;">{{broadcasting}}</text>
+            </view>
+    <view>
+        <view class="searchbar">
+            <view class="search-box">
+                <input bindinput="typeInput" bindblur="inputSearchBlur" class="searchinput" id="searchinput" placeholder="{{wordSearch.word}}" value="{{wordSearch.word}}">
+
+                </input>
+                <view class="searchbutton" bindtap="toSearchPage">搜索</view>
+            </view>
+            <scroll-view class="sugglist" hidden="{{suggList.hiddeSugglist}}" id="sugglist" scroll-y="true">
+                <navigator wx:for="{{suggList.data}}" wx:for-index="suggIdx" wx:for-item="suggItem" class="suggword one-px-b" url="../search/index?kw={{suggItem.name}}">{{suggItem.name}}</navigator>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<view class="section section-hot">
+    <view class="titlebar one-px-b">
+        <view class="title">热搜词</view>
+        <view bindtap="refreshHotWordList" class="change-btn">换一换</view>
+    </view>
+    <view class="wordslist">
+        <view wx:for="{{hotwordList.data}}"  class="word">
+            <navigator url="../search/index?kw={{item.word}}">
+                <span class="word-item">{{item.word}}</span>
+                <span class="word-tag {{item.color}}">{{colors[item.color]}}</span>
+            </navigator>
+        </view>
+
+    </view>
+</view>
+<view class="section section-recommend">
+    <view class="titlebar one-px-b">
+        <view class="title">小编推荐</view>
+        <view class="all-btn hide">查看所有</view>
+    </view>
+    <view class="list-reco">
+        <view wx:for="{{recommendPackage.data}}" class="list-reco__item lazyload">
+            <navigator url="../pkg/list?kw={{item.name}}&id={{item.origin_id}}">
+                <image mode="aspectFill"
+                          src="{{item.img[0]}}">
+                </image>
+                <p>{{item.name}}</p>
+            </navigator>
+        </view>
+
+    </view>
+</view>
+<view class="section no-gap section-newest">
+    <view class="titlebar one-px-b">
+        <view class="title">最近更新</view>
+    </view>
+    <view class="giflist">
+        <view wx:for="{{newList.data}}" class="pic lazyload">
+            <navigator url="../detail/index?id={{item.origin_id}}">
+                <image mode="aspectFill"
+                          src="{{item.thumb_gif}}">
+                </image>
+            </navigator>
+        </view>
+
+    </view>
+</view>

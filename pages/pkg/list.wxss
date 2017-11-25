@@ -1,0 +1,121 @@
+.result {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 72px;
+    -webkit-align-items: center;
+    align-items: center;
+    color: #999;
+    background-color: #f9f9f9;
+}
+
+.result.hasResult {
+    height: 0;
+}
+
+.list-emoji {
+    background: #fff;
+    border-radius: 2px;
+    padding: 14px 0 0;
+    margin: 14px;
+    position: relative;
+}
+
+.list-emoji__info {
+    font-size: 12px;
+    margin: 0 0 5px 14px;
+}
+
+.list-emoji__info--name {
+    font-size: 13px;
+    color: #222;
+    height: 19px;
+    line-height: 19px;
+}
+
+.list-emoji__info--count {
+    color: #ffda44;
+    height: 16px;
+    vertical-align: top;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.list-emoji__info--summary {
+    color: #9b9b9b;
+}
+
+.list-emoji__gif {
+    width: auto;
+    padding: 6px 0 10px 14px;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    white-space: nowrap;
+}
+
+.list-emoji__gif .gif-wrap {
+    width: 48px;
+    height: 48px;
+    margin: 0 9px 0 0;
+    display: inline-block;
+}
+
+.list-emoji__gif wx-image {
+    width: 100%;
+    height: 100%;
+}
+
+.list-emoji .btn-view {
+    height: 42px;
+    line-height: 42px;
+    font-size: 13px;
+    color: #222;
+    text-align: center;
+    position: relative;
+}
+
+.titlebar {
+    display: -webkit-flex;
+    display: flex;
+    border: none;
+    color: #222;
+    font-size: 13px;
+    text-indent: 0;
+    padding: 9px 0;
+    margin: 0 9px;
+    position: relative;
+}
+
+.titlebar .title {
+    -webkit-flex: 1;
+    flex: 1;
+    padding-left: 22px;
+    background: url('http://ovhvevt35.bkt.clouddn.com/shan/titlebar_hot_3x.png') no-repeat 0 50% / 17px;
+    background-size: 15px 15px;
+}
+
+.section-hot {
+    position: relative;
+}
+
+.pic wx-navigator {
+    width: 107px;
+    height: 107px;
+}
+
+.pic wx-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.section-hot {
+    padding-bottom: 11px;
+}
+
+.section-newest .title {
+    background: url('http://ovhvevt35.bkt.clouddn.com/shan/titlebar_new_3x.png') no-repeat 0 50% / 17px;
+    background-size: 15px 15px;
+}

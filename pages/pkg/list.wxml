@@ -1,0 +1,12 @@
+<scroll-view enable-back-to-top="" style="height:{{scrollHeight}}px;" scroll-y="true" lower-threshold="100" class="gif-list-scroll">
+    <view class="giflist">
+        <navigator wx:for="{{pkgList}}" class="pic lazyload" url="../detail/index?id={{item.origin_id}}">
+            <image mode="aspectFill"
+                   src="{{item.thumb_gif}}">
+            </image>
+        </navigator>
+        <navigator class="pic placeholder"></navigator>
+        <navigator class="pic placeholder"></navigator>
+    </view>
+</scroll-view>
+<view class="result hasResult"></view>

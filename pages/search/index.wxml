@@ -1,0 +1,52 @@
+<scroll-view bindscrolltolower="pullUpLoad" class="gif-list-scroll"  lower-threshold="100" scroll-y="true" scroll-top="{{scrollTop}}" scroll-left="0">
+    <view wx:for="{{hot.data.pkg_list}}" wx:for-index="pkgIdx" wx:for-item="pkgItem" class="list-emoji"  hidden="{{hot.hiddenPkgList}}">
+        <view class="list-emoji__info">
+            <span class="list-emoji__info--name"><span>{{pkgItem.name}}</span>
+            </span>
+            <span class="list-emoji__info--count"><span>{{pkgItem.count}}P</span>
+            </span>
+        </view>
+        <view class="list-emoji__info">
+            <text class="list-emoji__info--summary"><span>{{pkgItem.summary}}</span>
+            </text>
+        </view>
+        <scroll-view class="list-emoji__gif" scroll-x="false">
+            <view wx:for="{{pkgItem.img}}" wx:for-index="piIdx" wx:for-item="piItem" class="gif-wrap lazyload">
+                <image src="{{piItem}}">
+                </image>
+            </view>
+
+        </scroll-view>
+        <view class="btn-view one-px-t">
+            <navigator url="../pkg/list?kw={{pkgItem.name}}&id={{pkgItem.id}}">查看表情包</navigator>
+        </view>
+    </view>
+    <view class="section section-hot" hidden="{{hot.hiddenHotList}}">
+        <view class="titlebar one-px-b">
+            <view class="title">最热推荐</view>
+        </view>
+        <view class="giflist">
+            <view wx:for="{{hot.data.hot_list}}" wx:for-index="hotIdx" wx:for-item="hotItem" class="pic lazyload">
+                <navigator url="../detail/index?id={{hotItem.id}}">
+                    <image mode="aspectFill" src="{{hotItem.url}}"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="section section-newest no-gap" hidden="{{newList.hiddenNewList}}">
+        <view class="titlebar one-px-b">
+            <view class="title">最近更新</view>
+        </view>
+        <view class="giflist">
+            <view wx:for="{{newList.data}}" wx:for-index="newIdx" wx:for-item="newItem" class="pic lazyload">
+                <navigator url="../detail/index?id={{newItem.id}}">
+                    <image mode="aspectFill" src="{{newItem.url}}"></image>
+                </navigator>
+            </view>
+            <view class="pic placeholder"></view>
+            <view class="pic placeholder"></view>
+        </view>
+    </view>
+    <view class="result {{hasResult ? 'hasResult':''}}" hidden="{{hasResult}}">没有您想要的搜索结果！</view>
+
+</scroll-view>
