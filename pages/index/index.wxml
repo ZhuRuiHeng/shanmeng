@@ -1,21 +1,22 @@
 <view class="section no-gap section-searchBar">
     <!--滚动文字  -->
-    <view class="marquee_text" style="{{orientation}}:{{marqueeDistance2}}px;font-size: {{size}}px;">
-        <text>{{broadcasting}}</text>
-        <text wx:if="{{marquee2copy_status}}" style="margin-left:{{marquee2_margin}}px;">{{broadcasting}}</text>
-            </view>
-    <view>
-        <view class="searchbar">
-            <view class="search-box">
-                <input bindinput="typeInput" bindblur="inputSearchBlur" class="searchinput" id="searchinput" placeholder="{{wordSearch.word}}" value="{{wordSearch.word}}">
-
-                </input>
-                <view class="searchbutton" bindtap="toSearchPage">搜索</view>
-            </view>
-            <scroll-view class="sugglist" hidden="{{suggList.hiddeSugglist}}" id="sugglist" scroll-y="true">
-                <navigator wx:for="{{suggList.data}}" wx:for-index="suggIdx" wx:for-item="suggItem" class="suggword one-px-b" url="../search/index?kw={{suggItem.name}}">{{suggItem.name}}</navigator>
-            </scroll-view>
+    <view class="marquee">
+        <view class="content">
+            <text>{{broadcasting}}</text> <text style="display: inline-block; width: 5em;"></text>
+            <text>{{broadcasting}}</text> <text style="display: inline-block; width: 5em;"></text>
+            <text>{{broadcasting}}</text> <text style="display: inline-block; width: 5em;"></text>
         </view>
+    </view>
+    <view class="searchbar">
+        <view class="search-box">
+            <input bindinput="typeInput" bindblur="inputSearchBlur" class="searchinput" id="searchinput" placeholder="{{wordSearch.word}}" value="{{wordSearch.word}}">
+
+            </input>
+            <view class="searchbutton" bindtap="toSearchPage">搜索</view>
+        </view>
+        <scroll-view class="sugglist" hidden="{{suggList.hiddeSugglist}}" id="sugglist" scroll-y="true">
+            <navigator wx:for="{{suggList.data}}" wx:for-index="suggIdx" wx:for-item="suggItem" class="suggword one-px-b" url="../search/index?kw={{suggItem.name}}">{{suggItem.name}}</navigator>
+        </scroll-view>
     </view>
 </view>
 <view class="section section-hot">
